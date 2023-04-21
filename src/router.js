@@ -4,6 +4,7 @@ import SearchByLetter from './views/SearchByLetter.vue'
 import Ingredients from './views/Ingredients.vue'
 import PageNotFOund from './views/PageNotFOund.vue'
 import MealDetails from './views/MealDetails.vue'
+import SearchByIngredient from './views/SearchByIngredient.vue'
 
 
 const routes = [
@@ -23,15 +24,21 @@ const routes = [
             component: Ingredients 
         },
         { 
-            path: '/:pathMatch(.*)*', 
-            name: 'pageNotFOund', 
-            component: PageNotFOund 
+            path: '/seatchByIngredient/:ingredient', 
+            name: 'seatchByIngredient', 
+            component: SearchByIngredient 
         },
         {
             path: '/meal/:id',
             name: 'mealDetails',
             component: MealDetails
         },
+        { 
+            path: '/:pathMatch(.*)*', 
+            name: 'pageNotFOund', 
+            component: PageNotFOund 
+        },
+       
   ]
 
 

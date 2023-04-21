@@ -5,8 +5,8 @@
             </router-link>            
             <div class="p-3">
             <h3 class = "font-bold">{{ meal.strMeal }}</h3> 
-                <p class="mb-4">{{meal.strInstructions.substring(0, 150)}}...</p>
-                <YoutubeButton :href ="meal.strYoutube"/>
+                <p class="mb-4">{{meal.strInstructions ? meal.strInstructions.substring(0, 150) + '...': ''}}</p>
+                <YoutubeButton :href ="meal.strYoutube" v-if = "meal.strYoutube"/>
             </div>
         </div>
 </template>

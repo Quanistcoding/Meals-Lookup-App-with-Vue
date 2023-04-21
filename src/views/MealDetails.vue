@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class = "mt-3">
-             <YoutubeButton :href = "meal.strYoutube">video
+             <YoutubeButton :href = "meal.strYoutube" v-if = "meal.strYoutube">video
             </YoutubeButton>    
         </div>
        
