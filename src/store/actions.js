@@ -12,3 +12,16 @@ export function setKeyword({commit},Keyword){
         commit('setIsLoading',false);
     })
 }
+
+export function setSearchLetter({commit},letter){
+    commit('setSearchLetter',letter);
+    commit('setIsLoading',true);
+    axiosClient.get('search.php?f='+ letter).then(({data})=>{
+        if(letter == '')
+            commit('setMealsByLetter',[]);
+        else
+            commit('setMealsByLetter',data.meals);
+
+        commit('setIsLoading',false);
+    })
+}
