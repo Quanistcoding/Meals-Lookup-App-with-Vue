@@ -25,3 +25,8 @@ export function setSearchLetter({commit},letter){
         commit('setIsLoading',false);
     })
 }
+
+export function setIsLoading({commit},isLoading){
+    console.log(isLoading)
+    commit('setIsLoading',isLoading);
+}
