@@ -1,6 +1,6 @@
 <template>
     <div class = "bg-white shadow-lg rounded-xl pb-2">
-            <router-link to = "/">
+            <router-link :to = "{name:'mealDetails',params:{id:meal.idMeal}}">
                 <img :src = "meal.strMealThumb" :alt = "meal.strMeal" class="rounded-t-xl w-full h-36 object-cover">
             </router-link>            
             <div class="p-3">
