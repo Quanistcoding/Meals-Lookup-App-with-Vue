@@ -1,5 +1,5 @@
 <template>
-    <div class = "text-red-500 font-bold">asdas</div>
+    <router-view></router-view>
 </template>
 
 <script setup>
